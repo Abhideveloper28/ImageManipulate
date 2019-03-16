@@ -6,8 +6,8 @@
     <li><%= link_to 'Upload New Image', new_image_path, class: 'btn btn-default btn-primary' %></li>
   </div>
 <% else %>
-  <table class="table table-striped">
-    <thead>
+  <table class="table">
+    <thead class="thead-dark">
       <tr>
         <th scope="col">Title</th>
         <th scope="col">Image</th>
@@ -20,10 +20,13 @@
           <td><%= image.title%></td>
           <td>
             <div class='image-fit'> 
-              <%= link_to image_tag(image.image.url, class: 'media-object'), image.image.url, target: '_blank' %>
+              <%= link_to image_tag(image.image.url(:thumb), class: 'media-object'), image.image.url, target: '_blank' %>
             </div>
           </td>
-          <td><%= link_to 'Resize', "javascript:void(0);"%></td>
+          <td>
+            <%= link_to 'Resize', "javascript:void(0);", class: 'btn btn-primary' %>
+            <%= link_to 'Remove', image_path(image), class: 'btn btn-danger', method: :delete, data: {confirm: 'Are you sure?'} %>
+          </td>
         </tr>
       <% end %>
     </tbody>

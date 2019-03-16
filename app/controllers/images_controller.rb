@@ -22,6 +22,16 @@ class ImagesController < ApplicationController
 	  end
 	end
 
+	def destroy
+		@image = Image.find(params[:id])
+		if @image.destroy
+			flash[:notice] = "Successfully deleted image!"
+			redirect_to root_path
+		else
+			flash[:alert] = "Error deleting image!"
+		end
+	end
+
 	private
 
 	#Permitted parameters when creating a image. This is used for security reasons.
