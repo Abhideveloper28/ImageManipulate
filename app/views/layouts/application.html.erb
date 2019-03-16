@@ -7,21 +7,12 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <header class="navbar navbar-default" role="navigation">
-    <div class="navbar-inner">
-      <div class="container">
-        <div id="logo" class="navbar-brand"><%= link_to "TEST APP", root_path %></div>
-        <nav class="collapse navbar-collapse navbar-ex1-collapse">
-            <ul class="nav navbar-nav navbar-right">
-              <li><%= link_to 'Home', "javascript:void(0);" %></li>
-            </ul>
-        </nav>
-      </div>
-    </div>
-  </header>
+  
+  <%= render 'layouts/navigation'%>
+  <%= render 'layouts/messages' %>
 
-  <div id="main_content" class="container">
-    <%= render 'layouts/messages' %>
+  <div class="container-fluid">
+    <%= yield %>
   </div>
 </body>
 </html>
