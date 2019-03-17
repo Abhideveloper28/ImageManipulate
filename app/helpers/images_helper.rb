@@ -1,3 +1,5 @@
+require 'image_util'
+
 module ImagesHelper
 
   def image_size(uploaded_image)
