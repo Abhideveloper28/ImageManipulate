@@ -5,6 +5,8 @@ class Image < ApplicationRecord
 		square: '200*200>',
 		medium: '300*300>'
 	}
+
+	validates :image, presence: true
 	
 	#This validates the type of file uploaded. According to this, only images are allowed.
 	validates_attachment_content_type :image, content_type: /\Aimage\/.*\z/
