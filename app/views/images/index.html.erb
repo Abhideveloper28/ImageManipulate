@@ -20,7 +20,7 @@
         <tr>
           <td><%= image.title%></td>
           <td>
-            <div class='image-fit'> 
+            <div class='square'> 
               <%= link_to image_tag(image.image.url(:thumb), class: 'media-object'), image.image.url, target: '_blank' %>
             </div>
           </td>
