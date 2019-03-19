@@ -1,24 +1,30 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+* Ruby version : '2.5.1'
 
-Things you may want to cover:
+* Rails version : '5.2.2'
 
-* Ruby version
+* Database : Postgres
 
-* System dependencies
+* Uploader : paperclip 6.0.0
 
-* Configuration
+* RMagick : ImageMagick image processing library
 
-* Database creation
+App Details :
 
-* Database initialization
+The app is used to upload images and the uploaded images cab resized into any dimentions by given width and height. 
 
-* How to run the test suite
+The primary use of this app is the image optimization.
 
-* Services (job queues, cache servers, search engines, etc.)
+The technology used in this is Ruby on rails,  paperclip for image upload, AWS S3 for uploaded image file storage on cloud and Rmagick for image optimization. 
 
-* Deployment instructions
+To run the app on local here are the steps :
 
-* ...
+1. Clone the app. 
+2. Run bundle install. 
+3. Rake db:setup.
+4. Copy paperclip settings from production.rb file to development.rb and replace your aws s3 credentials.
+5. Rails server and app is running.
+
+
+Heroku URL : https://chela-test-job.herokuapp.com/
