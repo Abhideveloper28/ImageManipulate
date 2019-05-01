@@ -25,6 +25,3 @@ To run the app on local here are the steps :
 3. Rake db:setup.
 4. Copy paperclip settings from production.rb file to development.rb and replace your aws s3 credentials.
 5. Rails server and app is running.
-
-
-Heroku URL : https://chela-test-job.herokuapp.com/
